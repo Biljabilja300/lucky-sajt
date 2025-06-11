@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Molersko-fasaderska radnja</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Pozadinska slika preko celog ekrana */
+    body {
+      background-image: url('https://i.imgur.com/yW8AAJV.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    /* Overlay sloj da se bolje vidi tekst */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6); /* crna sa 60% providnosti */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      padding-bottom: 50px;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1, h2, h3, h4, h5 {
+      text-align: center;
+      margin: 20px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 18px;
+    }
+
+    .radovi {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .radovi div {
+      text-align: center;
+    }
+
+    .radovi img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .kontakt-box {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .kontakt-box a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .pozovi {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    .email {
+      background-color: darkred;
+      color: white;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: darkblue;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    ul {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navigacija -->
+    <nav>
+      <a href="#pocetna">Početna</a>
+      <a href="#radovi">Radovi</a>
+      <a href="#usluge">Usluge</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <!-- Naslovi -->
+    <h1 id="pocetna">Molersko-fasaderska radnja LUCKY</h1>
+    <h2>Dobrodošli</h2>
+    <h4>Ovde ćete naći što Vam treba da Vaš dom izgleda kao iz bajke</h4>
+
+    <!-- Sekcija: Radovi -->
+    <h3 id="radovi">Radovi</h3>
+    <p>Radimo unutrašnje i spoljašnje molerske i fasaderske radove, kao i dekorativne tehnike.</p>
+    <p>Cene radova dogovaramo individualno, u skladu sa zahtevima klijenata.</p>
+
+    <div class="radovi">
+      <div>
+        <img src="https://i.imgur.com/G8Hcp97.jpeg" alt="Spoljasnji">
+        <p>Spoljašnji</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/74LrL7D.jpeg" alt="Sahara">
+        <p>Sahara</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/zRyUO08.jpeg" alt="Unutrašnji">
+        <p>Unutrašnji</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/vH1PbE2.jpeg" alt="Unutrašnji">
+        <p>Unutrašnji</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/TtepjCR.jpeg" alt="Unutrašnji">
+        <p>Unutrašnji</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/oKxtiDj.jpeg" alt="Unutrašnji">
+        <p>Unutrašnji</p>
+      </div>
+    </div>
+
+    <!-- Usluge -->
+    <h3 id="usluge">Naše usluge:</h3>
+    <ul>
+      <li>Krečenje stanova i kuća</li>
+      <li>Fasaderski radovi</li>
+      <li>Gletovanje i šmirglanje</li>
+      <li>Bojenje stolarije</li>
+      <li>Postavljanje dekorativnih zidova</li>
+    </ul>
+
+    <!-- Kontakt -->
+    <h3 id="kontakt">Kontakt:</h3>
+    <div class="kontakt-box">
+      <h3>Kontaktirajte nas</h3>
+      <p><strong>Telefon:</strong> <a href="tel:+381692213022">069/2213022</a></p>
+      <p><strong>Email:</strong> <a href="mailto:sreckosrecko2020@gmail.com">sreckosrecko2020@gmail.com</a></p>
+      <p><strong>Adresa:</strong> Sremska Mitrovica</p>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="tel:+381692213022"><button class="pozovi">Pozovi sada</button></a>
+      <a href="mailto:sreckosrecko2020@gmail.com"><button class="email">Pošalji e-mail</button></a>
+    </div>
+
+    <!-- Forma -->
+    <form>
+      <label for="ime">Ime:</label>
+      <input type="text" id="ime" name="ime" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="poruka">Poruka:</label>
+      <textarea id="poruka" name="poruka" rows="4" required></textarea>
+
+      <input type="submit" value="Pošalji">
+    </form>
+  </div>
+</body>
+</html>
